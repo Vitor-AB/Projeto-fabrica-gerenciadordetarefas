@@ -1,24 +1,13 @@
 import { useEffect, useState } from 'react'
-import './App.css'
+import styles from './App.module.css'
+import LoginForm from './components/LoginForm';
 
 function App() {
-   const [backendData, setBackendData] = useState([{}])
-
-   useEffect(() => {
-    fetch('http://localhost:5100/api').then(
-      resp => resp.json()
-    ).then(
-      data => setBackendData(data)
-    ).catch(
-      e => console.log(e)
-    )
-   }, [])
-
-   console.log(backendData);
-
   return (
-    <div></div>
+    <div className={styles.app_container}>
+      <LoginForm />
+    </div>
   )
 }
 
-export default App
+export default App;
