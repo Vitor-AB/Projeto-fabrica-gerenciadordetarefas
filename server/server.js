@@ -9,8 +9,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("/validateLogin", (req, res) => {
   if (req.body.username === "Vitor" && req.body.password === "vitor") {
-    console.log(req.body.username);
-    console.log(req.body.password);
     res.redirect("http://localhost:5173/acessopermitido");
   }
   res.redirect("http://localhost:5173/acessonegado");
