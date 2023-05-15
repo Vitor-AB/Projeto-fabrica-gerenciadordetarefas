@@ -1,6 +1,6 @@
 import styles from "./LoginForm.module.css";
 
-function LoginForm(params) {
+function LoginForm() {
   return (
     <div className={styles.login_container}>
       <div className={styles.form_container}>

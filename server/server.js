@@ -7,16 +7,13 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/api", (req, res) => {
-  res.json({ user: ["userOne", "userTwo", "userThree"] });
-});
-
 app.post("/validateLogin", (req, res) => {
-  if (req.body.username == "Vitor" && req.body.password == "vitor") {
+  if (req.body.username === "Vitor" && req.body.password === "vitor") {
     console.log(req.body.username);
     console.log(req.body.password);
-    res.redirect("http://localhost:5173/");
+    res.redirect("http://localhost:5173/acessopermitido");
   }
+  res.redirect("http://localhost:5173/acessonegado");
 });
 
 app.listen("3000", () => {
