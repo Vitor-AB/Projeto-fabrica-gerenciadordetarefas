@@ -1,11 +1,7 @@
-const mysql = require("mysql");
+const postgres = require('postgres');
+const url = "postgres://gerenciadordetarefas_user:eYXMo4JqtmUR3sWOEQMqVIP6HX2lukIK@dpg-chhcnf8rddl9a73subvg-a/gerenciadordetarefas";
 
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "123456",
-});
-
-connection.connect((err) => {
-  if (err) throw err;
-});
+const sql = postgres(url);
+module.exports = {
+  sql
+}
