@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const postgres = require("postgres");
 const url = "db.zfkjduqqqghwsyspbbka.supabase.co";
 
@@ -15,4 +13,3 @@ const sql = postgres({
 module.exports = {
   sql,
 };
->>>>>>> branch01
