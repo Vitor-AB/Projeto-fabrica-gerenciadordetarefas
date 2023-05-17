@@ -15,7 +15,7 @@ app.post("/validateLogin", (req, res) => {
       const { username } = user[0];
       const { password } = user[0];
       if (req.body.username === username && req.body.password === password) {
-        res.redirect("http://localhost:5173/acessopermitido");
+        res.redirect("http://localhost:5173/gerenciador");
       } else {
         res.redirect("http://localhost:5173/acessonegado");
       }
