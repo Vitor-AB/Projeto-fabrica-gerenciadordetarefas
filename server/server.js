@@ -1,9 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const {sql} = require("./Connection");
+const { sql } = require("./Connection");
 const app = express();
-
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,18 +18,17 @@ app.listen("3000", () => {
   console.log("Server started on port 3000");
 });
 
- 
 async function createTable() {
-  const xs = await sql`
-  CREATE TABLE IF NOT EXISTS valid_users (username TEXT, password TEXT)
-  `
+  const table = await sql`
+  CREATE TABLE IF NOT EXISTS valid_users( username TEXT , password TEXT )
+  `;
 }
 
-async function insert() {
-  const xs = await sql`
-  INSERT INTO valid_users ${ sql([{ username: 'Vitor', password: 'vitor' }]) }
-`  
+async function insertTable() {
+  const insert = await sql`
+  INSERT INTO valid_users ( username , password )
+  VALUES ( 'User' , '1234' )
+  `;
 }
 
-createTable();
-insert();
+insertTable();
