@@ -1,4 +1,5 @@
 import styles from "./LoginForm.module.css";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   return (
@@ -13,6 +14,7 @@ function LoginForm() {
 
             <button type="submit">Logar</button>
           </form>
+          <Link to="/cadastro">{"cadastro"}</Link>
         </div>
       </div>
     </div>
