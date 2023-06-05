@@ -1,0 +1,14 @@
+.colunas {
+    background-color: chartreuse;
+    margin: 50px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.coluna {
+    background-color: darkmagenta;
+    margin: 30px;
+    width: 300px;
+
+}
