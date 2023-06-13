@@ -24,9 +24,6 @@ app.post("/validateLogin", (req, res) => {
       res.redirect("http://localhost:5173/acessonegado");
     }
   }
-  // createDatabase();
-  // createTable();
-  // insertTable();
   validateLogin(req.body.username);
 });
 

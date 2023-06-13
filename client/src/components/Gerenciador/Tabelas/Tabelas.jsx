@@ -1,4 +1,4 @@
-import Coluna from "./Coluna";
+import Tarefa from "./Tarefa";
 import styles from "./Tabelas.module.css";
 
 function Tabelas() {
@@ -7,17 +7,31 @@ function Tabelas() {
         <div className={styles.colunas}>
             <div className={styles.coluna}>
                 
-                    <Coluna />
+                    <Tarefa />
+                    <Tarefa />
+                    <Tarefa />
                 
             </div>
             <div className={styles.coluna}>
                 
-                    <Coluna />
+                    <Tarefa />
+                    <Tarefa />
+                    <Tarefa />
+                    <Tarefa />
                 
             </div>
             <div className={styles.coluna}>
                 
-                    <Coluna />
+                    <Tarefa />
+                    <Tarefa />
+                    <Tarefa />
+                    <Tarefa />
+                    <Tarefa />
+                    <Tarefa />
+                    <Tarefa />
+                    <Tarefa />
+                    <Tarefa />
+                    <Tarefa />
                 
             </div>
             

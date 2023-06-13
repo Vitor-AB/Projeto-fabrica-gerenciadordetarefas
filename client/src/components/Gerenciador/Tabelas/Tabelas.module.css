@@ -3,12 +3,11 @@
     margin: 50px;
     height: 700px;
     display: flex;
-    justify-content: center;
 }
 
 .coluna {
     background-color: darkmagenta;
-    margin: 30px;
+    margin: 10px;
     width: 300px;
-
+    padding: 0 10px 5px 10px;
 }
