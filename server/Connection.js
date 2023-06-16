@@ -10,15 +10,16 @@ const sql = postgres({
   debug: true,
 });
 
-// const sql = postgres({
-//   host: "172.18.0.35", // Postgres ip address[s] or domain name[s]
-//   port: 5432, // Postgres server port[s]
-//   database: "postgres", // Name of database to connect to
-//   username: "postgres", // Username of database user
-//   password: "univille", // Password of database user
-//   debug: true,
-// });
+const sqlUniville = postgres({
+  host: "172.18.0.35", // Postgres ip address[s] or domain name[s]
+  port: 5432, // Postgres server port[s]
+  database: "postgres", // Name of database to connect to
+  username: "postgres", // Username of database user
+  password: "univille", // Password of database user
+  debug: true,
+});
 
 module.exports = {
   sql,
+  sqlUniville
 };

@@ -1,12 +1,19 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const { getUserPass, createTable, insertTable, createDatabase } = require("./db-manipulation");
+const { getUserPass, createTable, insertTable, createDatabase, getUserPassUni } = require("./db-manipulation");
 const { restart } = require("nodemon");
+const { setupDB, killTable } = require("./dbSetup_Univille");
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post("/setupUni",(req,res) => {
+  killTable();
+  setupDB();
+})
+
 
 app.post("/validateLogin", (req, res) => {
   async function validateLogin(name) {
