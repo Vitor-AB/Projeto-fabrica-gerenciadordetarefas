@@ -32,13 +32,13 @@ app.post("/cadastroTable", (req,res) => {
     if (usuario !== null && senha !== null) {
       insertTable(usuario,senha);
       res.redirect("http://localhost:5173/");
-      
     }
-
   }
-
   cadastro(req.body.username , req.body.password);
-})
+});
+
+
+
 
 app.listen("3000", () => {
   console.log("Server started on port 3000");
