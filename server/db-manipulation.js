@@ -1,4 +1,4 @@
-const { sql, sqlUniville } = require("./Connection");
+const { sql } = require("./Connection");
 
 async function createDatabase() {
   const database = await sql`
@@ -19,14 +19,6 @@ async function insertTable(nome, senha) {
     `;
 }
 
-async function getUserPassUni(user = "null") {
-  const getuser = await sqlUniville`
-    SELECT username , password FROM valid_users WHERE username = ${user}
-    `;
-  return getuser;
-}
-
-
 async function getUserPass(user = "null") {
   const getuser = await sql`
     SELECT username , password FROM valid_users WHERE username = ${user}
@@ -36,7 +28,6 @@ async function getUserPass(user = "null") {
 
 module.exports = {
   getUserPass,
-  getUserPassUni,
   insertTable,
   createTable,
   createDatabase,
