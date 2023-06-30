@@ -1,4 +1,10 @@
-
 .navtext{
     font-size: 45px;
+    color: white;
+}
+
+nav {
+    background-color: #070707;
+    height: 50px;
+    text-align: center;
 }

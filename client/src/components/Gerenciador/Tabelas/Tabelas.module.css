@@ -1,13 +1,16 @@
 .colunas {
-    background-color: chartreuse;
+    background-color: #DEE5E5;
     margin: 50px;
     height: 700px;
     display: flex;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .coluna {
-    background-color: darkmagenta;
+    background-color: #070707;
     margin: 10px;
     width: 300px;
     padding: 0 10px 5px 10px;
+    border-radius: 10px;
 }
