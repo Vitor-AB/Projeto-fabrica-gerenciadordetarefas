@@ -1,5 +1,14 @@
 .container_tarefa{
     background-color: #17B890;
-    height: 50px;
     border-radius: 4px;
 }
+
+h2{
+    font-size: 20px;
+    text-indent: 5px;
+}
+
+p{
+    text-indent: 5px;
+}
+

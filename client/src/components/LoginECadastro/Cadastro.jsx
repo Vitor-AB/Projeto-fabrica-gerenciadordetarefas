@@ -8,7 +8,7 @@ function Cadastro() {
             <div className={styles.form_container}>
                 <div className={styles.input_container}>
                 <form action="http://localhost:3000/cadastroTable" method="post">
-                    <label htmlFor="username">Nome de usuario:</label>
+                    <label htmlFor="username">Nome de Usuario:</label>
                     <input type="text" name="username" id="username"/>
                     <label htmlFor="senha">Digite a sua senha:</label>
                     <input type="password" name="password" id="password"/>
