@@ -1,11 +1,6 @@
 .gerenciador{
     height: 100dvh;
     width: 100dvw;
-    background-color: blueviolet;
+    background-color: #9DC5BB;
 }
 
-.navbar {
-    background-color: aqua;
-    height: 50px;
-    text-align: center;
-}

@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const { getUserPass, createTable, insertTable, createDatabase, getTabelasTarefas } = require("./db-manipulation");
+const { getUserPass, createTable, insertTable, createDatabase} = require("./db-manipulation");
 const { restart } = require("nodemon");
 const app = express();
 

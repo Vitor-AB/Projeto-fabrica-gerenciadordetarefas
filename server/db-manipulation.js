@@ -19,7 +19,6 @@ async function insertTable(nome, senha) {
     `;
 }
 
-
 async function getUserPass(user = "null") {
   const getuser = await sql`
     SELECT username , password FROM valid_users WHERE username = ${user}

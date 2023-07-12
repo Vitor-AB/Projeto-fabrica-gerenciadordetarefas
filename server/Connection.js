@@ -10,7 +10,7 @@ const sql = postgres({
   debug: true,
 });
 
-// const sql = postgres({
+// const sqlUniville = postgres({
 //   host: "172.18.0.35", // Postgres ip address[s] or domain name[s]
 //   port: 5432, // Postgres server port[s]
 //   database: "postgres", // Name of database to connect to
@@ -21,4 +21,5 @@ const sql = postgres({
 
 module.exports = {
   sql,
+  // sqlUniville
 };
