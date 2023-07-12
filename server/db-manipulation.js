@@ -27,9 +27,15 @@ async function getUserPass(user = "null") {
   return getuser;
 }
 
+async function getTabelasTarefas() {
+  const tabelas = await sql` SELECT tb.name_tabela, tf.name_tarefa, tf.text_tarefa FROM tabelas tb INNER JOIN tarefas tf ON tb.id_tabela = tf.id_tarefa`;
+  return tabelas;
+}
+
 module.exports = {
   getUserPass,
   insertTable,
   createTable,
   createDatabase,
+  getTabelasTarefas,
 };
