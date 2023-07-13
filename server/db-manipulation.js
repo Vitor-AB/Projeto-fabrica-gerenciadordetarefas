@@ -28,6 +28,7 @@ async function getUserPass(user = "null") {
 
 async function getTabelasTarefas() {
   const tabelas = await sql` SELECT tb.name_tabela, tf.name_tarefa, tf.text_tarefa FROM tabelas tb INNER JOIN tarefas tf ON tb.id_tabela = tf.id_tarefa`;
+  console.log(tabelas);
   return tabelas;
 }
 

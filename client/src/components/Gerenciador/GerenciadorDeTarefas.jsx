@@ -3,6 +3,7 @@ import styles from './GerenciadorDeTarefas.module.css'
 import Tabelas from "./Tabelas/Tabelas";
 
 export default function GerenciadorDeTarefas() {
+
   return (
     <div className={styles.gerenciador}>
         <Navbar/>

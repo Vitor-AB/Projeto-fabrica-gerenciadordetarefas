@@ -1,8 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const { getUserPass, createTable, insertTable, createDatabase} = require("./db-manipulation");
+const { getUserPass, createTable, insertTable, createDatabase,getTabelasTarefas} = require("./db-manipulation");
 const { restart } = require("nodemon");
+const { supabase } = require("./Connection_Supabase");
 const app = express();
 
 app.use(cors());
@@ -17,6 +18,7 @@ app.post("/validateLogin", (req, res) => {
       const { password } = user[0];
       if (req.body.username === username && req.body.password === password) {
         res.redirect("http://localhost:3000/tabelas");
+        // res.redirect("http://localhost:5173/gerenciador");
       } else {
         res.redirect("http://localhost:5173/acessonegado");
       }
@@ -26,6 +28,20 @@ app.post("/validateLogin", (req, res) => {
   }
   validateLogin(req.body.username);
 });
+
+// app.post("/loginSupa", (req,res) => {
+//   async function login(loginData) {
+//     let { data, error } = await supabase.auth.signInWithPassword({
+//       email: loginData.email,
+//       password: loginData.password
+//     })
+//   }
+//   if(login({email:req.body.email, password:req.body.password})){
+//     res.redirect("http://localhost:5173/gerenciador");
+
+//   };
+// });
+
 
 app.post("/cadastroTable", (req,res) => {
   async function cadastro(usuario, senha) {
@@ -38,12 +54,11 @@ app.post("/cadastroTable", (req,res) => {
 });
 
 app.post("/tabelas", (req, res) => {
-  console.log('OLA');
-  async function tabelas() {
-    console.log(await getTabelasTarefas());
+  async function getTabelas() {
+    return await getTabelasTarefas();
   }
-  tabelas();
-  // res.redirect("http://localhost:5173/gerenciador");
+  getTabelas();
+  res.redirect("http://localhost:5173/gerenciador");
 });
 
 
