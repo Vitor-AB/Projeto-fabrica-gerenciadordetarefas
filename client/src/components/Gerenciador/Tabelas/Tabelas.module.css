@@ -11,7 +11,7 @@
 .coluna {
     background-color: #070707;
     margin: 10px;
-    width: 330px;
+    width: 335px;
     padding: 0 10px 5px 10px;
     border-radius: 10px;
 }
@@ -26,7 +26,9 @@ h1{
 }
 
 .table_title_container h1{
-    width: 200px;
+    width: 330px;
+    font-size: 200%;
+    word-wrap: break-word;
 }
 .table_btn_container{
     width: 100px;
@@ -46,6 +48,10 @@ h1{
 .tarefa_container{
     height: 566px;
     overflow-y: auto;
+}
+
+.tarefa_container::-webkit-scrollbar{
+    scrollbar-width: 0 !important;
 }
 
 .insert_button{

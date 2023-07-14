@@ -37,5 +37,6 @@ h2{
 p{
     text-indent: 5px;
     word-wrap: break-word;
+    padding: 0px 5px 5px 5px;
 }
 

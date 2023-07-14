@@ -60,6 +60,10 @@ function LoginForm() {
 
               <button type="submit" onClick={() => {handleLogin("LOGIN")}}>Logar</button>
               <br />
+              <br />
+              
+              <button type="submit" onClick={() => {handleLogin("REGISTER")}}>Registrar</button>
+              <br />
             </div>
           </div>
         </div>
