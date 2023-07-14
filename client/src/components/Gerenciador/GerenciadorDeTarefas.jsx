@@ -1,16 +1,17 @@
 import Navbar from "./Navbar";
 import styles from './GerenciadorDeTarefas.module.css'
 import Tabelas from "./Tabelas/Tabelas";
+import { useEffect } from "react";
 
-export default function GerenciadorDeTarefas() {
+export default function GerenciadorDeTarefas({signOut,user}) {
+  
 
   return (
     <div className={styles.gerenciador}>
-        <Navbar/>
+        <Navbar signOut={signOut}/>
       <div className={styles.tabelas}>
-        <Tabelas />
+        <Tabelas user={user}/>
       </div>
-      <h1>Gerenciador de Tarefas!</h1>
     </div>
   );
 }

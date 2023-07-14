@@ -1,10 +1,35 @@
-.navtext{
-    font-size: 45px;
+.navcontainer{
+    /* font-size: 45px; */
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
     background-color: #070707;
     height: 50px;
     text-align: center;
+}
+
+.text{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -20px;
+    font-size: 30px;
+}
+
+.nav_button{
+    position: absolute;
+    right: 0;
+    height: 50px;
+    width: 100px;
+    font-size: larger;
+    background-color: inherit;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.nav_button:hover{
+    text-decoration: underline;
 }

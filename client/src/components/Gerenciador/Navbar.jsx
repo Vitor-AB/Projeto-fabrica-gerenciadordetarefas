@@ -1,9 +1,12 @@
 import styles from "./Navbar.module.css";
 
-function Navbar() {
+function Navbar({signOut}) {
     return (
         <>
-            <nav className={styles.navtext}>Navbar</nav>
+            <nav className={styles.navcontainer}>
+                <h2 className={styles.text}>Gerenciador de Tarefas</h2>
+                <button onClick={signOut} className={styles.nav_button}>SignOut</button>
+            </nav>
         </>
     
     )

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./LoginForm.module.css";
 import { supabase } from "../../lib/api_Supa";
 import GerencidorDeTarefas from "../Gerenciador/GerenciadorDeTarefas";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   const [user, setUser] = useState(null);
@@ -21,6 +22,7 @@ function LoginForm() {
 
   useEffect(() => {
     const session = supabase.auth.getSession();
+    console.log("Connected!");
     console.log(session);
     setUser(session?.user);
 
@@ -46,7 +48,7 @@ function LoginForm() {
 
   return (
     <div>
-      {user ? <div><GerencidorDeTarefas/><button onClick={()=> signOut()}>SignOut</button></div> : 
+      {user ? <div><GerencidorDeTarefas signOut={signOut} user={user}/></div> : 
       <div className={styles.login_container}>
         <div className={styles.form_container}>
           <div className={styles.input_container}>
@@ -57,10 +59,8 @@ function LoginForm() {
               <input type="password" name="password" id="password" ref={passwordRef} required/>
 
               <button type="submit" onClick={() => {handleLogin("LOGIN")}}>Logar</button>
-              
+              <br />
             </div>
-            <br />
-            
           </div>
         </div>
       </div>
