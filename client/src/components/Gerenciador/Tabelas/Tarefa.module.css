@@ -13,6 +13,8 @@
 }
 .btn_container{
     width: 100px;
+    display: flex;
+    align-items: flex-end;
 }
 .btn_container button{
     height: 30px;
@@ -34,5 +36,6 @@ h2{
 
 p{
     text-indent: 5px;
+    word-wrap: break-word;
 }
 

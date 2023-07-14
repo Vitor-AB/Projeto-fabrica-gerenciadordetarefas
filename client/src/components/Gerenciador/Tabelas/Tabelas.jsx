@@ -105,6 +105,7 @@ function Tabelas() {
             <button className={styles.insert_button} onClick={() => {
                 insertTable();
             }}><AiOutlinePlus /></button>
+            
             {tabelas? tabelas.map((tabela) => {
                 return <div className={styles.coluna} key={tabela.id_tables}>
                     <div className={styles.table_title_container}>
@@ -121,10 +122,13 @@ function Tabelas() {
                             }}><AiFillDelete/></button>
                         </div>
                     </div>
-
-                    {tabela.Tarefas.map((tarefa) => {
-                        return <Tarefa key={tarefa.id_tarefas} id={tarefa.id_tarefas} title={tarefa.title_tarefa} text={tarefa.text_tarefa} alter={alterTarefa} deletar={deleteTarefa}/>
-                    })}
+                    <div className={styles.tarefa_container}>
+    
+                        {tabela.Tarefas.map((tarefa) => {
+                            return <Tarefa key={tarefa.id_tarefas} id={tarefa.id_tarefas} title={tarefa.title_tarefa} text={tarefa.text_tarefa} alter={alterTarefa} deletar={deleteTarefa}/>
+                        })}
+    
+                    </div>
                 </div>
             }): <h1>Falha</h1>}
         </div>

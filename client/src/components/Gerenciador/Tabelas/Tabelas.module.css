@@ -5,12 +5,13 @@
     display: flex;
     border: 2px solid black;
     border-radius: 10px;
+    overflow-x: auto;
 }
 
 .coluna {
     background-color: #070707;
     margin: 10px;
-    width: 300px;
+    width: 330px;
     padding: 0 10px 5px 10px;
     border-radius: 10px;
 }
@@ -42,13 +43,18 @@ h1{
     cursor: pointer;
 }
 
+.tarefa_container{
+    height: 566px;
+    overflow-y: auto;
+}
+
 .insert_button{
     position: absolute;
-    right: 80px;
-    top: 110px;
+    right: 70px;
+    top: 66px;
     height: 30px;
     width: 30px;
-    background-color: #9DC5BB;
+    background-color: #9DC5cc;
     border: 1px solid black;
 }
 
