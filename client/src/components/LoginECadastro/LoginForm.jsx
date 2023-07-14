@@ -48,7 +48,7 @@ function LoginForm() {
 
   return (
     <div>
-      {user ? <div><GerencidorDeTarefas signOut={signOut} user={user}/></div> : 
+      {user ? <div><GerencidorDeTarefas signOut={signOut}/></div> : 
       <div className={styles.login_container}>
         <div className={styles.form_container}>
           <div className={styles.input_container}>
