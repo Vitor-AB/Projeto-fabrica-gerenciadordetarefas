@@ -2,4 +2,4 @@
 
 Trabalho para a disciplina de Fabrica de Software
 
-Gerenciador de tarefas que permite a adição de tabelas com tarefas.
+## Gerenciador de tarefas simples, que permite a adição e remoção de tarefas.
