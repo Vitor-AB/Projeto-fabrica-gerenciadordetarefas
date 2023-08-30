@@ -1,5 +1,5 @@
 # Projeto Fabrica de Software - Gerenciador de Tarefas
 
-Trabalho de Fabrica de Software
+Trabalho para a disciplina de Fabrica de Software
 
-Gerenciador de tarefas
+Gerenciador de tarefas que permite a adição de tabelas com tarefas.
